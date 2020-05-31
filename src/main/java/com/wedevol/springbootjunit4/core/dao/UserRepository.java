@@ -14,7 +14,7 @@ public interface UserRepository {
 
     UserEntity create(UserEntity userInput);
 
-    void update(String id, UserEntity userInput);
+    void update(String id, UserEntity userDb);
 
     void delete(String id);
 
@@ -23,5 +23,7 @@ public interface UserRepository {
     UserEntity findByEmail(String email);
 
     Integer countAll();
+    
+    void resetDb();
 
 }

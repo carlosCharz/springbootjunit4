@@ -19,9 +19,8 @@ public class UserEntity implements Serializable {
 
     public UserEntity() {}
 
-    public UserEntity(Long id, String name) {
+    public UserEntity(String name) {
         super();
-        this.id = id;
         this.name = name;
     }
 

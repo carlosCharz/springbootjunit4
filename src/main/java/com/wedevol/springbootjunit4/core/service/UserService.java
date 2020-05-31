@@ -14,7 +14,7 @@ public interface UserService {
 
     UserEntity create(UserEntity userInput);
 
-    void update(String id, UserEntity userInput);
+    UserEntity update(String id, UserEntity userInput);
 
     void delete(String id);
 

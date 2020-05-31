@@ -1,8 +1,8 @@
 package com.wedevol.springbootjunit4.core.dao.impl;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Repository;
 import com.wedevol.springbootjunit4.core.dao.UserRepository;
@@ -18,7 +18,7 @@ import com.wedevol.springbootjunit4.core.entity.UserEntity;
 public class UserRepositoryImpl implements UserRepository {
 
     private final AtomicLong COUNTER = new AtomicLong(0);
-    private static final Map<String, UserEntity> USERS = new HashMap<>();
+    private static final Map<String, UserEntity> USERS = new ConcurrentHashMap<>();
 
     @Override
     public UserEntity findById(String id) {
@@ -33,8 +33,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void update(String id, UserEntity userInput) {
-        USERS.put(id, userInput);
+    public void update(String id, UserEntity userDb) {
+        USERS.put(id, userDb);
     }
 
     @Override
@@ -56,6 +56,12 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public Integer countAll() {
         return USERS.size();
+    }
+
+    @Override
+    public void resetDb() {
+        COUNTER.set(0);
+        USERS.clear();
     }
 
 }

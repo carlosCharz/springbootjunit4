@@ -74,8 +74,7 @@ public class UserControllerTest {
 
     @After
     public void tearDown() {
-        userRepository.delete(USER_ONE_ID.toString());
-        userRepository.delete(USER_TWO_ID.toString());
+        userRepository.resetDb();
     }
 
     @Test(expected = NestedServletException.class)
@@ -101,7 +100,7 @@ public class UserControllerTest {
 
     @Test
     public void updateUser() throws Exception {
-        UserEntity user2 = new UserEntity(USER_TWO_ID, "Louis");
+        UserEntity user2 = new UserEntity("Louis");
         mockMvc.perform(put("/users/" + USER_TWO_ID).contentType(CONTENT_TYPE).content(json(user2)))
                 .andExpect(status().is2xxSuccessful());
     }
