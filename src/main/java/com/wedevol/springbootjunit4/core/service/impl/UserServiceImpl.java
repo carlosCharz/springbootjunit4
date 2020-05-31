@@ -17,7 +17,7 @@ import com.wedevol.springbootjunit4.core.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired

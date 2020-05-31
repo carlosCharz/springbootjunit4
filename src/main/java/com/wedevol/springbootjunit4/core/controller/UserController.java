@@ -46,9 +46,9 @@ public class UserController {
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@PathVariable String userId, @Valid @RequestBody UserEntity user) {
+    public UserEntity update(@PathVariable String userId, @Valid @RequestBody UserEntity user) {
         logger.info("Update user: {}", userId);
-        userService.update(userId, user);
+        return userService.update(userId, user);
     }
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)

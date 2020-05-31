@@ -23,7 +23,7 @@ public interface UserRepository {
     UserEntity findByEmail(String email);
 
     Integer countAll();
-    
+
     void resetDb();
 
 }
