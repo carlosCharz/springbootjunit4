@@ -1,4 +1,4 @@
-# Getting Started
+# Spring Boot JUnit 4
 
 ### Reference Documentation
 For further reference, please consider the following sections:

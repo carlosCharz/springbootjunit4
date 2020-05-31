@@ -1,0 +1,27 @@
+package com.wedevol.springbootjunit4.core.dao;
+
+import com.wedevol.springbootjunit4.core.entity.UserEntity;
+
+/**
+ * Interface for the User Repository Implementation
+ *
+ * @author Charz++
+ */
+
+public interface UserRepository {
+
+    UserEntity findById(String id);
+
+    UserEntity create(UserEntity userInput);
+
+    void update(String id, UserEntity userInput);
+
+    void delete(String id);
+
+    Boolean exists(String id);
+
+    UserEntity findByEmail(String email);
+
+    Integer countAll();
+
+}
