@@ -1,6 +1,6 @@
 # JUnit 4 Tests in Spring Boot project
 
-Demo Spring Boot project with JUnit 4 Tests. It includes integration and unit tests. Tests for: rest controller class, service class and simple class.
+Demo Spring Boot project with JUnit 4 Tests. It includes integration test (for controller) and unit tests (for service and simple class).
 
 ## Technologies
 
@@ -46,8 +46,8 @@ http://localhost:8080/springbootjunit4/users
 
 ## Documentation and Examples
  
-* [Spring Initializr](https://start.spring.io): There you can easily generate the structure of a Spring Boot Project
-* [JUnit 4 Get Start](https://github.com/junit-team/junit4/wiki/Getting-started): There you will find the JUnit 4 get started.
+* [Spring Initializr](https://start.spring.io): To generate the structure of a Spring Boot Project
+* [JUnit 4 Get Started](https://github.com/junit-team/junit4/wiki/Getting-started)
 
 ## About me
 I am Carlos Becerra - MSc. Softwware & Systems.  But to tell you the truth, I'd prefer to be a passionate developer. You can contact me via:

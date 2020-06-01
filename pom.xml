@@ -7,8 +7,8 @@
 	<artifactId>springbootjunit4</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<name>Spring Boot JUnit 4</name>
-	<description>Demo project for Spring Boot JUnit 4</description>
+	<name>JUnit 4 Tests in Spring Boot project</name>
+	<description>Demo Spring Boot project with JUnit 4 tests</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

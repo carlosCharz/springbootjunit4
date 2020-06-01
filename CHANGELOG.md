@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file, in a per re
 -------------------------------------------------------------------------------------
 
 
-## [r1_v1] - 2020-05-30
+## [r1_v1] - 2020-05-31
 
 ## Modified
 - JUnit 4 example: controller, service and repository
