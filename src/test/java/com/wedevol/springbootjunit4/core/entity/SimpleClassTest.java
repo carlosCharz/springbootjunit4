@@ -13,7 +13,7 @@ public class SimpleClassTest {
         String[] lineParts = line.split("\\|");
         Assert.assertFalse(lineParts.length == 0);
     }
-    
+
     @Ignore
     public void testDisabled() {
         assertEquals(26, 14 + 12);
