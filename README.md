@@ -22,6 +22,10 @@ Demo Spring Boot project with JUnit 4 Tests. It includes integration test (for c
  2. **Unit Test (for the Service):** it uses the Mockito framework
  3. **Unit Test (for a simple class)** it uses pure JUnit
 
+_**UPGRADE**_
+
+* [JUnit 5](https://github.com/carlosCharz/springbootjunit5): This GitHub project is the upgraded version using JUnit 5.
+
 ## Exposed methods
 
 **1. Get user by id. HTTP Method: GET**
