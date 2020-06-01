@@ -1,6 +1,5 @@
 package com.wedevol.springbootjunit4.core.controller;
 
-import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,14 +38,14 @@ public class UserController {
 
     @RequestMapping(value = "", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public UserEntity create(@Valid @RequestBody UserEntity user) {
+    public UserEntity create(@RequestBody UserEntity user) {
         logger.info("Create user");
         return userService.create(user);
     }
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public UserEntity update(@PathVariable String userId, @Valid @RequestBody UserEntity user) {
+    public UserEntity update(@PathVariable String userId, @RequestBody UserEntity user) {
         logger.info("Update user: {}", userId);
         return userService.update(userId, user);
     }

@@ -2,7 +2,6 @@ package com.wedevol.springbootjunit4.core.service.impl;
 
 import java.util.Arrays;
 import java.util.List;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -103,7 +102,7 @@ public class UserServiceImplTest {
         Integer usersQty = userService.countAll();
 
         // Verification
-        Assert.assertThat(usersQty, Matchers.is(3));
+        Assert.assertTrue(usersQty.intValue() == 3);
         Mockito.verify(repoMock, Mockito.times(1)).countAll();
         Mockito.verifyNoMoreInteractions(repoMock);
     }
